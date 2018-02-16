@@ -1,11 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
+var buildPath = '/include/shops/';
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'include/shops'),
+    publicPath: buildPath,
     filename: 'build.js'
   },
   module: {
@@ -58,7 +59,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: '/node_modules/'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
