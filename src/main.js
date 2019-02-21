@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import YmapPlugin from 'vue-yandex-maps/src/index.js'
+import YmapPlugin from 'vue-yandex-maps'
 
 require('../node_modules/simplebar/dist/simplebar.css')
 require('./assets/map.scss')
@@ -17,6 +17,7 @@ window.shopsMap = new Vue({
   el: '#shops-box',
   data: {
     searchString: "",
-    activeCity: "Москва"
+    activeCity: "",
+    showMap: true
   }
 })
